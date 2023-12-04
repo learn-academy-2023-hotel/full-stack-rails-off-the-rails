@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-get 'blogs' => 'blog#index'
+  root 'blog#index'
+get 'blogs' => 'blog#index' , as: 'home'
+get 'blogs/:id' => 'blog#show', as: 'blog'
 end
