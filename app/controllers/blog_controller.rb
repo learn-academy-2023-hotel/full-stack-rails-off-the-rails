@@ -16,6 +16,15 @@ class BlogController < ApplicationController
             redirect_to home_path
         end
     end
+    def destroy
+        @blog = Blog.find(params[:id])
+        if @blog.destroy    
+            redirect_to home_path
+        end
+    end
+    def edit
+        @blog = Blog.find(params[:id])
+    end
 
     private
         def blog_params
