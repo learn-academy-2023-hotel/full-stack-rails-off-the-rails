@@ -1,8 +1,20 @@
-<h1>Blog App</h1>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/button.css"> 
+</head>
 
-  <% @blogs.each do |blog| %>
-  <p><%= link_to blog.title, blog_path(blog) %></p>
-  <% end %>
-  <p><%= link_to 'Create a Blog', new_path %></p>
+<body>
+  <h1>Blog App</h1>
 
+  <div class='button-container'>
+    <% @blogs.each do |blog| %>
+      <%= link_to blog.title, blog_path(blog), class: 'blog-button' %>
+    <% end %>
+  </div>
+  <p><%= link_to 'Create a Blog', new_path, class: 'create-button' %></p>
+</body>
+
+</html>
