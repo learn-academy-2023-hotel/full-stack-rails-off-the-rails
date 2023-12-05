@@ -1,3 +1,6 @@
 <h3><%= @blogs.title %></h3>
 <p><%= @blogs.content %></p>
+<%= link_to 'Update Blog',
+    edit_blog_path(@blogs) %>
 <p><%= link_to 'Homeless', home_path %></p>
+<%= button_to 'Remove Book', delete_blog_path, method: 'delete' %>
